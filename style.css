@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1rem;
+}
+
+h1 {
+    margin: 0;
+}
+
+.chat {
+    width: 30%;
+    background-color: #121212;
+    color: white;
+    border-radius: 10px;
+    padding: 2em;
+    flex-direction: column;
+    max-height: 70vh;
+    overflow: scroll; 
+}
+
+.header, .box, .user-input,
+.chat, .container {
+    display: flex;
+}
+
+.container {
+    padding-right: 4em;
+    align-items: center;
+    justify-content: flex-end;
+    min-height: 100vh;
+}
+
+.header, .box, .user-input {
+    align-items: center;
+}
+
+.header img {
+    width: 20%;
+}
+
+.message, .close-btn {
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    font-size: 3rem;
+    background-color: #121212;
+    color: white;
+    border-radius: 50%;
+    padding: .5em;
+}
+
+.box i {
+    font-size: 2rem;
+    margin-right: .6em;
+}
+
+.bot-response, .user-response {
+    padding: 1em;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.user {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.bot-response {
+    width: 75%;
+    background-color: #333333;
+}
+
+.user-response {
+    background-color: #708090;
+}
+
+textarea {
+    width: 85%;
+    padding: .6em;
+    background-color: #708090;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+textarea::placeholder {
+    color: white;
+}
+
+button {
+    padding: .5em;
+    width: 15%;
+    background-color: #333333;
+    color: white;
+    font-size: 1.5rem;
+    border: 0;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.user-input {
+    border-top: 1px solid white;
+    padding:  1em 0;
+}
+
+.close-btn, .chat {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .chat {
+        width: 90%;
+        margin:  0 auto 2em;
+        padding: 1em;
+    }
+
+    .container {
+        padding-right: 0;
+    }
+
+    .message, .close-btn {
+        font-size: 2.5rem;
+    }
+}
